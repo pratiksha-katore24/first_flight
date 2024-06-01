@@ -1,0 +1,12 @@
+.navbar-container{
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+}
+.nav-menu{
+    color: white;
+    text-decoration: none;
+    background-color:blueviolet;
+    padding: 3px 10px;
+    margin: 5px 10px;
+}
