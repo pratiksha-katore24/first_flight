@@ -1,24 +1,30 @@
 import ReactDom from "react-dom/client"
 
-import Home from "./views/Home/Home"
-import Contact from "./views/Contact/Contact"
-import About from "./views/About/About"
+import Home from "../src/views/Home/Home"
+import Contact from "../src/views/Contact/Contact"
+import About from "../src/views/About/About"
+
+import{
+    createBrowserRouter,
+    RouterProvider
+}  from "react-router-dom"
 
 const root = ReactDom.createRoot(document.getElementById("root"))
 
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home/>
+    },
+    {
+        path: "/about",
+        element: <About/>
+    },
+    {
+        path: "/contact",
+        element: <Contact/>
+    }
+])
 
-const path = window.location.pathname
-
-if(path=="/")
-    {
-        root.render(<Home/>)
-    }
-else if (path=="/about")
-    {
-        root.render(<About/>)
-    }
-else if (path=="/contact")
-    {
-        root.render(<Contact/>)
-    }
+root.render(<RouterProvider router={router}/>)
 

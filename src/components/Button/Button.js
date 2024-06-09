@@ -2,10 +2,7 @@ import "./Button.css"
 
 function Button() {
   return (
-    <Button classname="btn">
-     Click Me
-    </Button>
-   
+  <div>Click Me</div>
   )
 }
 
